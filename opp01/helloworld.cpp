@@ -8,5 +8,5 @@ int main()
 	SetValue obj;
 
 	system("pause");
-	return 0;
+
 }
