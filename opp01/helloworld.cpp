@@ -1,12 +1,16 @@
 #include<iostream>
-class SetValue
+
+void swap(int first, int second)
 {
-	int x, y;
-};
+	int temp = first;
+	first = second;
+	second = temp;
+}
+
 int main()
 {
-	SetValue obj;
-
-	system("pause");
-
+	int a = 2, b = 3;
+	swap(a, b);
+	std::cout << a << " " << b << std::endl;
+	return 0;
 }
