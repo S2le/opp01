@@ -17,15 +17,21 @@ void bubble_sort(ForwardIterator first, ForwardIterator last, Compare comp) {
 class compGreater {
 public:
 	bool operator() (int cur, int prev) {
-		return prev <= cur;
+		if (cur >= prev)
+			return true;
+		else
+			return false;
 	}
-};
+}; //비교하여 현재수가 크거나 같으면 true를 반환 아닐때는 false를 반환한다
 class compLess {
 public:
 	bool operator() (int cur, int prev) {
-		return cur < prev;
+		if (cur < prev)
+			return true;
+		else
+			return false;
 	}
-};
+}; //비교하여 현재수가 작으면 true를 반환 아닐때는 false를 반환한다
 int main() {
 	std::forward_list<int> values{ 7, 0, 6, 1, 5, 2, 4, 3 };
 	std::cout << "오름차순 정렬" << std::endl;
